@@ -9,13 +9,27 @@ import {
   Grid,
   Toolbar,
   Container,
+  // makeStyles,
 } from "@mui/material";
 import { PhotoCamera } from "@mui/icons-material";
 import * as React from "react";
 import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
+import { makeStyles } from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles((theme) => ({ 
+  container: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(8, 0, 6),
+  },
+  text: 
+  {
+    backgroundColor: theme.palette.common.primary,
+  }
+}));
 
 export default function App() {
+  const classes = useStyles();
   return (
     <>
       <CssBaseline />
@@ -26,9 +40,9 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <main>
-        <div>
+        <div className={classes.container}>
           <Container maxWidth="sm">
-            <Typography
+            <Typography className = {classes.text}
               variant="h2"
               align="center"
               color="textPrimary"
@@ -36,7 +50,7 @@ export default function App() {
             >
               Photo Album
             </Typography>
-            <Typography
+            <Typography className={classes.text}
               variant="h5"
               align="center"
               color="textSecondary"
