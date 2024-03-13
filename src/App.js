@@ -23,7 +23,7 @@ export default function App() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <PhotoCamera />
+          <PhotoCamera className={classes.icon} />
           <Typography variant="h6">Photo Album</Typography>
         </Toolbar>
       </AppBar>
@@ -48,7 +48,7 @@ export default function App() {
               sentence as long as possible so we can see how it looks on the
               screen.
             </Typography>
-            <div>
+            <div className={classes.button}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                   <Button variant="contained" color="primary">
