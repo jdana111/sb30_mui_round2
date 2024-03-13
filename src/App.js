@@ -14,19 +14,7 @@ import {
 import { PhotoCamera } from "@mui/icons-material";
 import * as React from "react";
 import Button from "@mui/material/Button";
-import { makeStyles } from '@material-ui/core/styles';
-
-
-const useStyles = makeStyles((theme) => ({ 
-  container: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  text: 
-  {
-    backgroundColor: theme.palette.common.primary,
-  }
-}));
+import useStyles from "./styles";
 
 export default function App() {
   const classes = useStyles();
