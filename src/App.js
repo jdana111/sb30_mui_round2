@@ -46,13 +46,22 @@ export default function App() {
               sentence as long as possible so we can see how it looks on the
               screen.
             </Typography>
+            <div>
+              <Grid container spacing={2} justifyContent="center">
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    See my photos
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="outlined" color="primary">
+                    Secondary action
+                  </Button>
+                </Grid>
+              </Grid>
+            </div>
           </Container>
         </div>
-        <ButtonGroup variant="contained" aria-label="Basic button group">
-          <Button>One</Button>
-          <Button>Two</Button>
-          <Button>Three</Button>
-        </ButtonGroup>
       </main>
     </>
   );
