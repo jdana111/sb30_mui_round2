@@ -16,6 +16,8 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import useStyles from "./styles";
 
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 export default function App() {
   const classes = useStyles();
   return (
@@ -30,7 +32,8 @@ export default function App() {
       <main>
         <div className={classes.container}>
           <Container maxWidth="sm">
-            <Typography className = {classes.text}
+            <Typography
+              className={classes.text}
               variant="h2"
               align="center"
               color="textPrimary"
@@ -38,7 +41,8 @@ export default function App() {
             >
               Photo Album
             </Typography>
-            <Typography className={classes.text}
+            <Typography
+              className={classes.text}
               variant="h5"
               align="center"
               color="textSecondary"
@@ -64,6 +68,38 @@ export default function App() {
             </div>
           </Container>
         </div>
+        <Container className={classes.cardGrid} maxWidth="md">
+          <Grid container spacing={4}>
+            {cards.map((card) => (
+              <Grid item key={card}>
+                <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="https://source.unsplash.com/random"
+                    title="Image title"
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography variant="h5" gutterBottom>
+                      Heding
+                    </Typography>
+                    <Typography>
+                      This is a media card. You can use this section to describe
+                      the content.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      View
+                    </Button>
+                    <Button size="small" color="primary">
+                      Edit
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
       </main>
     </>
   );
